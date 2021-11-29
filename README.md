@@ -3,7 +3,7 @@ Twitter用の単語置換ミュート。
 
 ## Install
 - Install [Tampermonkey](https://www.tampermonkey.net)
-- [Click me](https://github.com/coke12103/twitter-replace-mute/raw/main/twitter_replace_mute.user.js)
+- [Click me](https://github.com/coke12103/twitter-replace-mute/raw/master/twitter_replace_mute.user.js)
 
 ## Features
 - Objectで記述する高度な置換ミュート
