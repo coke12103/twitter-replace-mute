@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Twitter replace mute
 // @namespace    https://github.com/coke12103
-// @version      0.0.1
+// @version      0.0.2
 // @description  指定したキーワードを指定した文字に置き換えることでミュートします。
 // @author       coke12103
 // @match        https://twitter.com/*
