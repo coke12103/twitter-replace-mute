@@ -124,9 +124,19 @@ function callback(mutations){
       // テキストが含まれるspanのみを抽出する
       // このセレクタでRT時の名前、名前、本文が抽出できる。
       // 但し余分なspanも混ざるのでそこだけ適当に処理段階でフィルターする
-      const text_elements = element.querySelectorAll('[dir="auto"] span:not([data-testid="socialContext"]):not([aria-hidden="true"])');
+      //
+      // divとaで別のセレクタを使用することにした(壊れるので)
+      const text_elements = element.querySelectorAll('div[dir="auto"] span:not([data-testid="socialContext"]):not([aria-hidden="true"])');
 
       for(const tx_el of text_elements){
+        if(!is_child_text(tx_el)) continue;
+
+        tx_el.innerText = replace_all(tx_el.innerText);
+      }
+
+      const a_text_elements = element.querySelectorAll('a[dir="auto"][id] span:not([data-testid="socialContext"]:not([aria-hidden="true"]))');
+
+      for(const tx_el of a_text_elements){
         if(!is_child_text(tx_el)) continue;
 
         tx_el.innerText = replace_all(tx_el.innerText);
